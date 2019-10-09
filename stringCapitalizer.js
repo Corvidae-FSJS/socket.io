@@ -1,5 +1,5 @@
-const toAllCaps = str => str.toUppercase();
+function toAllCaps(str) {
+  return str.toUpperCase();
+}
 
 module.exports = toAllCaps;
-
-//emit 'file-write'.capitalizedStr
