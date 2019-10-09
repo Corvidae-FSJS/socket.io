@@ -1,15 +1,14 @@
 const io = require('socket.io-client');
 const socket = io.connect('http://localhost:7890');
-const readFile = require('./file-reader');
+const readFile = require('./file-read');
+let path = process.argv[2];
 
-io.on(readFile, data => {
-  socket.emit(process.argv[2]);
-  console.log(data);
-});
-
-readfile(process.argv[2])
+readFile(process.argv[2])
   .then(data => {
-  //emit an event
+    socket.emit('file-read', { data: data, path });
+  })
+  .catch(err => {
+    socket.emit('file-error', err);
   });
 
 
