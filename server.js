@@ -14,11 +14,9 @@ io.on('connection', socket => {
   socket.on('file-error', err => {
     console.log(err);
   });
-  
-  // socket.on('file-saved', saved => {
-    //console.log(saved);
-    //socket.broadcast.emit('file-saved', saved);
-    // });
+  socket.on('file-saved', saved => {
+    console.log(saved);
+  });
     
 });
 
