@@ -1,5 +1,5 @@
 {
-  "name": "fsjs-e2e-route-model-quiz",
+  "name": "socket.io",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,7 +9,6 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "jest": "jest --runInBand",
     "test": "npm run jest",
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run jest -- --watchAll",
@@ -31,7 +30,6 @@
   },
   "devDependencies": {
     "eslint": "^6.4.0",
-    "jest": "^24.9.0",
     "nodemon": "^1.19.2",
     "prettier": "^1.18.2",
     "supertest": "^4.0.2"
